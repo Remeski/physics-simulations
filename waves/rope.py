@@ -7,7 +7,7 @@ N = 100
 L = 3
 # R = lambda x: 0.05 if x <= 2 else 0.03
 # v = lambda x: 1 if x <= 2 else 2
-v = lambda x: 1 if x < 1.5 else 2
+v = lambda x: 1 if x < 1.7 and x > 1.3 else 2
 R = lambda x: 1/v(x)*0.03
 
 points = [np.array([L/N*x,0]) for x in range(N)]
@@ -17,7 +17,7 @@ a0 = lambda t: 1 if t < 0.2 else 0
 # v0 = lambda t: 5*np.sin(2*np.pi/0.5*t) if t < 0.5 else 0
 v0 = lambda t: 5*np.sin(2*np.pi/0.5*t)
 
-u0 = lambda t: 0.3*np.sin(2*np.pi/0.5*t) if t < 0.25 else 0
+u0 = lambda t: 0.3*np.sin(2*np.pi/0.5*t) if t < 4 else 0
 
 mu = 0.0
 
